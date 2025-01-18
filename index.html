@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon TCG Pocket</title>
+    <style>
+        /* Basic CSS styling for images and layout */
+        .pack {
+            width: 100px;
+            height: 150px;
+            border: 1px solid black;
+            margin: 10px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .card {
+            width: 80px;
+            height: 110px;
+            border: 1px solid black;
+            margin: 5px;
+            display: inline-block;
+        }
+        .timer {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .hourglass {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pokemon TCG Pocket</h1>
+
+    <div id="packs">
+        <img class="pack" src="pack1.png" onclick="openPack(1)">
+        <img class="pack" src="pack2.png" onclick="openPack(2)">
+        <img class="pack" src="pack3.png" onclick="openPack(3)">
+    </div>
+
+    <div id="timer"></div>
+
+    <img class="hourglass" src="hourglass.png" onclick="speedUpTime()">
+
+    <div id="cardContainer"></div>
+
+    <script>
+        // Define card data (replace with actual card images and rarities)
+        const cardData = {
+            pack1: [
+                { name: "Pikachu", image: "pikachu.png", rarity: "Common" },
+                { name: "Charmander", image: "charmander.png", rarity: "Uncommon" }, 
+                // ... more cards
+            ],
+            pack2: [
+                // ... cards for pack 2
+            ],
+            pack3: [
+                // ... cards for pack 3
+            ]
+        };
+
+        let currentPack = null;
+        let timerInterval;
+        let timeRemaining = 12; 
+
+        function openPack(packId) {
+            if (currentPack) {
+                alert("Please wait for the current pack timer to finish.");
+                return;
+            }
+
+            currentPack = packId;
+            timeRemaining = 12;
+            startTimer();
+
+            // Simulate opening cards (replace with actual card logic)
+            const cards = [];
+            for (let i = 0; i < 5; i++) {
+                const randomIndex = Math.floor(Math.random() * cardData["pack" + packId].length);
+                cards.push(cardData["pack" + packId][randomIndex]);
+            }
+
+            displayCards(cards); 
+        }
+
+        function startTimer() {
+            const timerElement = document.getElementById("timer");
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                timerElement.textContent = `Time Remaining: ${timeRemaining} hours`;
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    currentPack = null;
+                    timerElement.textContent = ""; 
+                }
+            }, 3600000); // Update timer every hour (3600000 milliseconds)
+        }
+
+        function speedUpTime() {
+            if (currentPack) {
+                timeRemaining -= 1;
+                const timerElement = document.getElementById("timer");
+                timerElement.textContent = `Time Remaining: ${timeRemaining} hours`;
+            }
+        }
+
+        function displayCards(cards) {
+            const cardContainer = document.getElementById("cardContainer");
+            cardContainer.innerHTML = ""; 
+
+            cards.forEach(card => {
+                const cardElement = document.createElement("div");
+                cardElement.classList.add("card");
+                cardElement.innerHTML = `
+                    <img src="${card.image}" alt="${card.name}">
+                    <p>${card.name} - ${card.rarity}</p>
+                `;
+                cardContainer.appendChild(cardElement);
+            });
+        }
+
+    </script>
+
+</body>
+</html>
