@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Pokemon TCG Pocket</title>
+    <title>Pokemon TCG</title>
     <style>
         /* Basic CSS styling for images and layout */
         .pack {
@@ -13,10 +13,10 @@
             display: inline-block;
         }
         .card {
-            width: 80px;
-            height: 110px;
+            width: 50px;
+            height: 80px;
             border: 1px solid black;
-            margin: 5px;
+            margin: 0px;
             display: inline-block;
         }
         .timer {
@@ -48,8 +48,59 @@
         // Define card data (replace with actual card images and rarities)
         const cardData = {
             pack1: [
-                { name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
-                { name: "haracross", image: "https://pkmncards.com/wp-content/uploads/sv1_en_002-1.jpg", rarity: "Uncommon" }, 
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Heracross", image: "https://pkmncards.com/wp-content/uploads/sv1_en_002-1.jpg", rarity: "Uncommon" }, 
+{ name: "Shroomish", image: "https://pkmncards.com/wp-content/uploads/sv1_en_003-1.jpg", rarity: "Common" },
+{ name: "breloom", image: "https://pkmncards.com/wp-content/uploads/sv1_en_004-1.jpg", rarity: "Uncommon" },
+{ name: "cacnea", image: "https://pkmncards.com/wp-content/uploads/sv1_en_005-1.jpg", rarity: "Common" },
+{ name: "cacturne", image: "https://pkmncards.com/wp-content/uploads/sv1_en_006-1.jpg", rarity: "Uncommon" },
+{ name: "tropius", image: "https://pkmncards.com/wp-content/uploads/sv1_en_007-1.jpg", rarity: "Common" },
+{ name: "scatterbug", image: "https://pkmncards.com/wp-content/uploads/sv1_en_008-1.jpg", rarity: "Common" },
+{ name: "spewpa", image: "https://pkmncards.com/wp-content/uploads/sv1_en_009-1.jpg", rarity: "Common" },
+{ name: "vivillon", image: "https://pkmncards.com/wp-content/uploads/sv1_en_0010-1.jpg", rarity: "Common" },
+{ name: "skiddo", image: "https://pkmncards.com/wp-content/uploads/sv1_en_0011-1.jpg", rarity: "Common" },
+{ name: "gogoat", image: "https://pkmncards.com/wp-content/uploads/sv1_en_0012-1.jpg", rarity: "Common" },
+{ name: "sprigitito", image: "https://pkmncards.com/wp-content/uploads/sv1_en_0013-1.jpg", rarity: "Common" },
+{ name: "floragato", image: "https://pkmncards.com/wp-content/uploads/sv1_en_0014-1.jpg", rarity: "Common" },
+{ name: "meowscarada", image: "https://pkmncards.com/wp-content/uploads/sv1_en_0015-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
+{ name: "Pineco", image: "https://pkmncards.com/wp-content/uploads/sv1_en_001-1.jpg", rarity: "Common" },
                 // ... more cards
             ],
             pack2: [
